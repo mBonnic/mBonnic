@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAWASENA</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f4ef;
+      color: #3e2f20;
+      line-height: 1.6;
+    }
+
+    header img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Navbar utama */
+    nav {
+      background: linear-gradient(90deg, #c89f6c, #f1d8b2);
+      padding: 12px 15px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      transition: all 0.3s ease;
+    }
+
+    nav a {
+      color: #3e2f20;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #7b4e24;
+      transform: scale(1.05);
+    }
+
+    /* Tombol menu (hamburger) */
+    .menu-toggle {
+      display: none;
+      background-color: #c89f6c;
+      color: #3e2f20;
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin: 10px 0 0 15px;
+      cursor: pointer;
+    }
+
+    main {
+      background-color: #fffdf8;
+      margin: 30px auto;
+      padding: 25px 30px;
+      max-width: 900px;
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #5b3a29;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 17px;
+      text-align: justify;
+      margin-bottom: 15px;
+    }
+
+    footer {
+      background: linear-gradient(90deg, #c89f6c, #f1d8b2);
+      color: #3e2f20;
+      text-align: center;
+      padding: 18px;
+      margin-top: 40px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      font-size: 14px;
+    }
+
+    /* Responsif: Tablet */
+    @media (max-width: 768px) {
+      main {
+        padding: 20px;
+        margin: 20px;
+      }
+      nav a {
+        font-size: 15px;
+      }
+    }
+
+    /* Responsif: HP */
+    @media (max-width: 480px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .menu-toggle {
+        display: block;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      nav a {
+        font-size: 15px;
+        padding: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="gambar/nawasena.jpg" alt="Banner NAWASENA">
+  </header>
+
+  <!-- Tombol menu muncul hanya di HP (di bawah header, sebelah kiri) -->
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="navbar">
+    <a href="index.html">Beranda</a>
+    <a href="fisiologis.html">Fisiologis</a>
+    <a href="psikologis.html">Psikologis</a>
+    <a href="perilaku.html">Perilaku</a>
+    <a href="lingkungan.html">Lingkungan</a>
+  </nav>
+
+  <main>
+    <h2>NAWASENA</h2>
+    <p><strong>NAWASENA (Nursing Awareness and Supervision Enhancement for Nursing Advancement)</strong> merupakan inovasi supervisi keperawatan di Ruang Pandudewanata, ruang rawat inap khusus pasien jantung dan paru.</p>
+
+    <p>Program ini bertujuan untuk meningkatkan kesadaran, tanggung jawab, dan mutu pelayanan keperawatan melalui pembinaan langsung oleh kepala ruangan kepada seluruh tim perawat.</p>
+
+    <p>Melalui sistem supervisi NAWASENA, kegiatan pembimbingan, evaluasi, dan peningkatan kinerja perawat dilakukan secara terstruktur, komunikatif, dan berkesinambungan.</p>
+
+    <p>Dengan semangat <em>“Nawasena”</em> yang bermakna masa depan yang cerah, diharapkan tercipta lingkungan kerja yang harmonis, profesional, dan berorientasi pada keselamatan serta kenyamanan pasien jantung dan paru.</p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 NAWASENA | Nursing Awareness and Supervision Enhancement for Nursing Advancement (SUPERVISI)</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
+    }
+  </script>
+</body>
+</html>
